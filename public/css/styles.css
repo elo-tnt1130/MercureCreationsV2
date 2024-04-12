@@ -1,0 +1,41 @@
+h1 {
+  color: orange !important;
+}
+
+h2,
+h3,
+h4 {
+  color: #06266f;
+}
+
+h5 {
+  color: #0a3aa8;
+}
+
+h6 {
+  color: #4671d5;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768.1px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
