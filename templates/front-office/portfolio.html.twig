@@ -1,0 +1,140 @@
+{% extends 'base_frontoffice.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+{% endblock %}
+
+{% block title %}
+  Portfolio
+{% endblock %}
+
+{% block body %}
+  <style>
+    .example-wrapper {
+      margin: 1em auto;
+      max-width: 800px;
+      width: 95%;
+      font: 18px/1.5 sans-serif;
+    }
+    .example-wrapper code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+    }
+  </style>
+
+  <main>
+    <h1>Portfolio</h1>
+
+    <section id="sitesweb" class="">
+      <div class="">
+        <h2>Sites web</h2>
+      </div>
+
+      <div class="">
+        <article class="">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">REACTION MOTO</h3>
+            <p class="">Production pour le compte de la concession moto Reaction Moto de St Ouen l'Aumône (95)</p>
+            <p class="">
+              Le site <a href="reaction-moto.com" class="">Reaction moto</a> est consultable en ligne.
+            </p>
+          </div>
+        </article>
+
+        <article class="">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">LIBRAIRIE</h3>
+            <p class="">Travail sur le PHP.</p>
+            <p class="">
+              Le site <a href="librairie.net" class="">Librairie</a> est consultable en ligne.
+            </p>
+          </div>
+        </article>
+
+        <article class="">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">EBOUTIK</h3>
+            <p class="">Travail sur le PHP.</p>
+            <p class="">
+              Le site <a href="eboutik.net" class="">Eboutik</a> est consultable en ligne.
+            </p>
+          </div>
+        </article>
+
+        <article class="">
+          <img src="/img/portfolio-13.png" alt=" Nantes" class="" />
+          <div>
+            <h3 class="">NANTES</h3>
+            <p class="">Travail sur le PHP</p>
+            <p class="">
+              Le site <a href="nantes.net" class="">Nantes</a> est consultable en ligne.
+            </p>
+          </div>
+        </article>
+
+        <article class="">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">CONVERTER</h3>
+            <p class="">Travail sur le React Native.</p>
+            <p class="">
+              Le site <a href="converter.net" class="">Converter</a> est consultable en ligne.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="prodgraphique" class="">
+      <div class="">
+        <h2>Production graphique</h2>
+      </div>
+      <article class="">
+        <div class="" data-ride="carousel">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">DIJON GESTION MOTEUR</h3>
+            <p class="">Travaux en tant que chargée de communication.</p>
+            <p class="card-text">
+              D'autres exemples sont disponibles sur demande. <br />
+              <a href="/page/contact" class="text-warning">Contact</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="">
+        <div class="" data-ride="carousel">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">ASSOCIATION DES SPORTS AUTOMOBILES DE CHAMPAGNE</h3>
+            <p class="">Travaux en tant que graphiste bénévole.</p>
+            <p class="card-text">
+              D'autres exemples sont disponibles sur demande. <br />
+              <a href="/page/contact" class="text-warning">Contact</a>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="">
+        <div class="" data-ride="carousel">
+          <img src="/img/coder_at_work.png" alt="image_générique" class="" />
+          <div class="">
+            <h3 class="">SUPPLAY</h3>
+            <p class="">Travaux en tant qu'assistante de communication.</p>
+            <p class="card-text">
+              D'autres exemples sont disponibles sur demande. <br />
+              <a href="/page/contact" class="text-warning">Contact</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+{% endblock %}
