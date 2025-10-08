@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-    background-color: lightgray;
+@layer base {
+  body {
+    background-color: lightgreen;
+  }
+  ,
+  img {
+    height: 4.05rem;
+  }
+  ,
+  h1 {
+    @apply text-2xl;
+  }
 }
+
+/* @layer components {
+  .card {
+    background-color: theme("colors.white");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+  /* ... 
+}*/

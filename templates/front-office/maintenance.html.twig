@@ -1,6 +1,7 @@
 {% extends 'base_frontoffice.html.twig' %}
 
 {% block stylesheets %}
+
 {% endblock %}
 
 {% block title %}
@@ -8,28 +9,27 @@
 {% endblock %}
 
 {% block body %}
-  
   <main>
-    <section class="">
-      <article class="">
+    <section class="ContactMe">
+      <article class="contact_form">
         <!-- FORMULAIRE DE CONTACT -->
         <form action="mailto:elo.caille@gmail.com" method="POST" enctype="text/plain">
-          <div class="">
+          <div class="lastname">
             <label for="nom">Votre nom<font color="red">*</font></label>
             <input type="text" class="" id="nom" name="nom" placeholder="..." pattern="^[\w]+$" required />
           </div>
 
-          <div class="">
+          <div class="firstname">
             <label for="prenom">Votre prénom<font color="red">*</font></label>
             <input type="text" class="" id="prenom" name="prenom" placeholder="..." pattern="^[\w]+$" required />
           </div>
 
-          <div class="">
+          <div class="email">
             <label for="mail">Votre e-mail<font color="red">*</font></label>
             <input type="text" class="" id="mail" name="mail" placeholder="name@example.com" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required />
           </div>
 
-          <div class="">
+          <div class="sujet">
             <label for="sujet">Sujet</label>
             <select class="" id="sujet" name="sujet">
               <option>Je suis une entreprise, je recherche un(e) freelance</option>
@@ -39,7 +39,7 @@
             </select>
           </div>
 
-          <div class="">
+          <div class="message-contact">
             <label for="message-contact">Votre message</label>
             <textarea class="" id="message-contact" name="message-contact" rows="4" placeholder="Ecrivez votre message ici..."></textarea>
           </div>
@@ -50,19 +50,19 @@
         <!-- FIN FORMULAIRE DE CONTACT -->
       </article>
 
-      <article class="">
+      <article class="contact_info">
         <!-- INFOS DE CONTACT -->
-        <div class="">
+        <div class="contact_dev">
           <h4 class="">Informations de contact</h4>
-          <div class="">
+          <div class="address">
             <address>
               <strong>Adresse</strong><br />
-              Piazzale Europa, 82 <br />
-              25068 Sarezzo, BS <br />
+              Via Antonio Canova, 29 <br />
+              15121 Alessandria, AL <br />
               Italia
             </address>
           </div>
-          <div class="">
+          <div class="coordinates">
             <address>
               <strong>Téléphone</strong><br />
               +39 351 819 6452
@@ -72,11 +72,19 @@
         <!-- FIN INFOS DE CONTACT -->
 
         <!-- API GOOGLE MAP -->
-        <figure class="">
+        <figure class="googlemap">
+          <p>Pense a mettre a jour ta map</p>
           <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.1079668545517!2d10.198470276637737!3d45.648653521112216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47817965440ec7bf%3A0x9f6e15fdb59de9d6!2sPiazzale%20Europa%2C%2082%2C%2025068%20Sarezzo%20BS%2C%20Italia!5e0!3m2!1sit!2srs!4v1711635038590!5m2!1sit!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </figure>
         <!-- FIN API GOOGLE MAP -->
       </article>
+    </section>
+
+    <section class="Maintenance">
+      <div>
+        <h1>Site en maintenance</h1>
+        <p>Nous nous excusons pour le désagrément généré. Nous revenons bientôt!</p>
+      </div>
     </section>
   </main>
 {% endblock %}

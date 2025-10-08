@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+    # Active le moteur de réécriture
+    Options +SymLinksIfOwnerMatch
+    RewriteEngine On
+
+    # 1️⃣ Rediriger vers www (HTTP_HOST sans www -> avec www)
+    # RewriteCond %{HTTP_HOST} !^www\.mercurecreations\.com$ [NC]
+    # RewriteRule ^(.*)$ https://www.mercurecreations.com/$1 [L,R=301]
+
+    # 2️⃣ Si la requête correspond à un fichier existant à la racine → le servir
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # 3️⃣ Si la ressource existe dans /public → la servir (pour CSS, JS, images…)
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # 4️⃣ Sinon, tout envoyer à Symfony (index.php)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php [QSA,L]
+</IfModule>
+
+
+RewriteEngine On
+
+
+
+# Fichiers statiques
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Routes Symfony
+RewriteRule ^(.*)$ public/index.php [QSA,L]

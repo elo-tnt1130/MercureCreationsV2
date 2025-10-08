@@ -1,4 +1,12 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Laisser passer les fichiers statiques (tes CSS, images, etc.)
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Sinon, tout envoyer vers index.php
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+
